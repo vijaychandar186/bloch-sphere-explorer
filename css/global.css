@@ -1,0 +1,70 @@
+:root {
+    --radius: 0.65rem;
+    --background: #ffffff;
+    --foreground: #1a1c25;
+    --card: #ffffff;
+    --card-foreground: #1a1c25;
+    --primary: #f4a32c;
+    --primary-foreground: #faf7e2;
+    --secondary: #f8f7fe;
+    --secondary-foreground: #2c2e3e;
+    --muted: #f8f7fe;
+    --muted-foreground: #85859a;
+    --accent: #f8f7fe;
+    --accent-foreground: #2c2e3e;
+    --destructive: #c0392b;
+    --border: #ecebf8;
+    --chart-1: #e67e22;
+    --chart-2: #2ecc71;
+    --chart-3: #3498db;
+    --chart-4: #f1c40f;
+    --chart-5: #e6b800;
+}
+
+.dark {
+    --background: #1e212b;
+    --foreground: #e0e0e0;
+    --card: #2a2e3b;
+    --card-foreground: #e0e0e0;
+    --primary: #f4a32c;
+    --primary-foreground: #faf7e2;
+    --secondary: #3a3f4e;
+    --secondary-foreground: #e0e0e0;
+    --muted: #3a3f4e;
+    --muted-foreground: #a0a0b0;
+    --accent: #3a3f4e;
+    --accent-foreground: #e0e0e0;
+    --destructive: #e74c3c;
+    --border: #3a3f4e;
+    --chart-1: #8e44ad;
+    --chart-2: #1abc9c;
+    --chart-3: #3498db;
+    --chart-4: #9b59b6;
+    --chart-5: #e6b800;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+    z-index: 0;
+}
+
+::view-transition-new(root) {
+    z-index: 1;
+    animation: reveal 0.4s ease-in-out forwards;
+}
+
+@keyframes reveal {
+    from {
+        clip-path: circle(0% at var(--x, 50%) var(--y, 50%));
+        opacity: 0.7;
+    }
+    to {
+        clip-path: circle(150% at var(--x, 50%) var(--y, 50%));
+        opacity: 1;
+    }
+}

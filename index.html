@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Bloch Sphere</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <script src="js/three/three.min.js"></script>
+    <script src="js/three/OrbitControls.js"></script>
+    <script>
+        // Apply saved theme immediately to prevent flashing
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.documentElement.classList.remove('dark');
+            } else {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
+        <style>
+        .control-panel.open {
+            left: 0;
+        }
+
+        .help-panel.open {
+            right: 0;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            background: var(--primary);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            background: var(--primary);
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+        }
+
+        .pole-label {
+            visibility: hidden;
+        }
+
+        .preset-btn, .button {
+            min-width: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 640px) {
+            .control-panel, .help-panel {
+                width: 100%;
+                max-width: none;
+            }
+            .top-buttons button {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/output.css">
+</head>
+<body class="bg-[var(--background)] text-[var(--foreground)] font-sans overflow-hidden h-screen">
+    <div id="canvas-container" class="relative w-screen h-screen">
+        <div id="pole-labels-container"></div>
+    </div>
+    <div id="top-buttons-container"></div>
+    <div id="control-panel-container"></div>
+    <div id="help-panel-container"></div>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

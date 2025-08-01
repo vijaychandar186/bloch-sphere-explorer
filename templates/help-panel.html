@@ -1,0 +1,38 @@
+<div class="help-panel fixed -right-full top-0 w-80 sm:w-96 max-h-screen bg-[var(--card)] border border-[var(--border)] rounded-l-[var(--radius)] backdrop-blur-2xl shadow-2xl p-6 z-30 flex flex-col gap-4 transition-[right] duration-300 ease-in-out overflow-y-auto" id="helpPanel">
+    <h2 class="text-lg font-semibold text-[var(--foreground)] mb-3">Help</h2>
+    <div class="section bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-4">
+        <h2 class="text-lg font-semibold text-[var(--foreground)] mb-3">Bloch Sphere Explanation</h2>
+        <p class="text-sm leading-relaxed text-[var(--foreground)]">
+            The Bloch Sphere is a geometric representation of the quantum state of a single qubit. A qubit, the fundamental unit of quantum information, can exist in a superposition of two basis states, typically denoted |0⟩ and |1⟩. The Bloch Sphere visualizes this state as a point on or inside a unit sphere, where:
+        </p>
+        <ul class="text-sm leading-relaxed text-[var(--foreground)] pl-5 list-disc">
+            <li>The <strong>North Pole</strong> represents the state |0⟩.</li>
+            <li>The <strong>South Pole</strong> represents the state |1⟩.</li>
+            <li>Points on the <strong>surface</strong> represent pure quantum states, described by the equation |ψ⟩ = cos(θ/2)|0⟩ + e<sup>iφ</sup>sin(θ/2)|1⟩, where θ (theta) is the polar angle and φ (phi) is the azimuthal angle.</li>
+            <li>The <strong>vector</strong> from the center to a point on the sphere represents the qubit's state, with its direction determined by θ and φ.</li>
+        </ul>
+        <p class="text-sm leading-relaxed text-[var(--foreground)]">
+            The probabilities of measuring |0⟩ or |1⟩ are determined by θ: P(|0⟩) = cos²(θ/2) and P(|1⟩) = sin²(θ/2). The phase φ affects the relative phase between |0⟩ and |1⟩, which is crucial for quantum interference.
+        </p>
+    </div>
+    <div class="section bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] p-4">
+        <h2 class="text-lg font-semibold text-[var(--foreground)] mb-3">How to Use This Visualization</h2>
+        <p class="text-sm leading-relaxed text-[var(--foreground)]">
+            This interactive tool allows you to explore the Bloch Sphere and manipulate a qubit's quantum state. Here's how to use it:
+        </p>
+        <ul class="text-sm leading-relaxed text-[var(--foreground)] pl-5 list-disc">
+            <li><strong>Orbit Controls</strong>: Click and drag to rotate the sphere, scroll to zoom, and explore the 3D view.</li>
+            <li><strong>Control Panel</strong>: Click the hamburger icon (top left) to open/close the control panel.</li>
+            <li><strong>Animation</strong>: Click "Start Animation" to animate the state vector, adjusting θ and φ over time. Use the "Animation Speed" slider to control the speed.</li>
+            <li><strong>Manual Control</strong>: Use the θ and φ sliders to manually set the polar and azimuthal angles, respectively, when animation is paused.</li>
+            <li><strong>Common States</strong>: Click preset buttons (|0⟩, |1⟩, |+⟩, |-⟩, |+i⟩, |-i⟩) to jump to common quantum states.</li>
+            <li><strong>Visualization Options</strong>: Toggle checkboxes to show/hide the trajectory, grid lines, or axes.</li>
+            <li><strong>Theme Toggle</strong>: Switch between light and dark themes for better visibility.</li>
+            <li><strong>Fullscreen</strong>: Enter/exit fullscreen mode for an immersive experience.</li>
+            <li><strong>Help</strong>: Click the ? button (top right) to open/close this help panel.</li>
+        </ul>
+        <p class="text-sm leading-relaxed text-[var(--foreground)]">
+            The control panel displays the current quantum state, θ and φ values, and probabilities of measuring |0⟩ or |1⟩. The trajectory option traces the path of the state vector during animation.
+        </p>
+    </div>
+</div>
